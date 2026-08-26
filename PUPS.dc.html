@@ -13,7 +13,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&amp;family=Barlow+Condensed:wght@500;600;700&amp;display=swap" rel="stylesheet">
 <style>
   html { scroll-behavior: smooth; }
-  body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); text-wrap: pretty; }
+  html { background: var(--color-bg); }
+  body { margin: 0; background: transparent; color: var(--color-text); font-family: var(--font-body); text-wrap: pretty; }
   a { color: var(--color-accent-700); text-decoration: none; }
   a:hover { color: var(--color-accent-600); }
   :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
@@ -22,16 +23,23 @@
 <template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#5980a6"/><text x="50" y="60" font-family="Barlow Condensed, sans-serif" font-size="30" font-weight="700" fill="#f2f2f3" text-anchor="middle">PUPS</text></svg></template>
 </helmet>
 
-<div style="background: var(--color-bg)">
+<div style="background: transparent">
 
-  <nav class="nav" style="position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--color-bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--color-divider); padding-inline: clamp(20px, 5vw, 72px); gap: 24px">
-    <span class="nav-brand" style="display: flex; align-items: center; gap: 10px; letter-spacing: 0.06em; text-transform: uppercase">
-      <img src="assets/mark.png" alt="Pack Animals" style="width: 30px; height: 30px; object-fit: contain">
-      Pack Animals
+  <div aria-hidden="true" style="position: fixed; inset: 0; z-index: -1; display: grid; place-items: center; pointer-events: none; overflow: hidden">
+    <img src="assets/badge-tight.png" alt="" style="width: min(74vw, 74vh); max-width: 1100px; object-fit: contain; opacity: 0.1">
+  </div>
+
+  <nav class="nav" style="position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--color-bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--color-divider); padding-inline: clamp(20px, 5vw, 72px); padding-block: 8px; gap: 24px">
+    <span class="nav-brand" style="display: flex; align-items: center; gap: 14px; letter-spacing: 0.06em; text-transform: uppercase">
+      <img src="assets/badge-tight.png" alt="Pack Animals" style="width: 58px; height: 58px; object-fit: contain">
+      <span style="display: flex; flex-direction: column; line-height: 1.05">
+        <span>Pack Animals</span>
+        <span style="font-family: var(--font-heading); font-size: 11px; font-weight: 500; letter-spacing: 0.18em; color: var(--color-accent-700)">Find Your Pack</span>
+      </span>
     </span>
     <a href="#install">Install</a>
     <a href="#quiver">Quiver math</a>
-    <a href="#tech">Technology</a>
+    <a href="pups/">Technology</a>
     <a href="#specs">Specs</a>
     <a class="btn btn-primary" href="https://www.packanimalsskico.com/category/all-products" style="text-decoration: none">Buy PUPS</a>
   </nav>
@@ -46,7 +54,8 @@
           <span style="display: block">Any binding.</span>
           <span style="display: block">Any time.</span>
         </h1>
-        <p style="margin: 28px 0 0; max-width: 46ch; font-size: 17px; line-height: 1.55; color: rgba(242,242,243,0.82)">Mount a base plate to each ski once. From then on any binding goes on any ski in seconds — alpine, touring, telemark. Two skis and two bindings stop being two setups and become four.</p>
+        <p style="margin: 22px 0 0; font-family: var(--font-heading); font-size: clamp(20px, 2.2vw, 28px); font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-300)">Find Your Pack</p>
+        <p style="margin: 28px 0 0; max-width: 46ch; font-size: 17px; line-height: 1.55; color: rgba(242,242,243,0.82)">Mount a base plate to each ski once. From then on any binding goes on any ski in seconds — alpine, touring, telemark. Now your quiver grows exponentially.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px">
           <a class="btn btn-primary" href="https://www.packanimalsskico.com/category/all-products" style="text-decoration: none; min-height: 42px; padding-inline: 22px">Order a plate set</a>
           <a class="btn" href="#install" style="text-decoration: none; min-height: 42px; padding-inline: 22px; color: var(--color-bg); border-color: rgba(242,242,243,0.4); background: transparent">See the swap</a>
