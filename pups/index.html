@@ -15,6 +15,20 @@
   body { margin: 0; background: transparent; color: var(--color-text); font-family: var(--font-body); text-wrap: pretty; }
   a { color: var(--color-accent-700); text-decoration: none; }
   a:hover { color: var(--color-accent-600); }
+
+  @media (max-width: 900px) {
+    [style*="grid-template-columns"] { grid-template-columns: minmax(0, 1fr) !important; }
+    [style*="min-height: 80vh"] { min-height: 0 !important; }
+    [style*="position: sticky"][style*="top: 96px"] { position: static !important; }
+    .nav { flex-wrap: wrap; row-gap: 8px; }
+    .nav-brand img { width: 46px !important; height: 46px !important; }
+    .dialog { max-height: none !important; }
+  }
+  @media (max-width: 560px) {
+    .nav { gap: 14px !important; }
+    .seg { flex-wrap: wrap; }
+    .seg-opt { min-width: 44%; }
+  }
 </style>
 <template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#5980a6"/><text x="50" y="58" font-family="sans-serif" font-size="22" font-weight="700" fill="#f2f2f3" text-anchor="middle">PUPS</text></svg></template>
 </helmet>
