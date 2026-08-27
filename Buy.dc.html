@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/industry-5a41f639-a2b8-4ab7-b0c3-873e21fbab49/styles.css">
+<script src="_ds/industry-5a41f639-a2b8-4ab7-b0c3-873e21fbab49/_ds_bundle.js"></script>
+<style>
+  html { background: var(--color-bg); scroll-behavior: smooth; }
+  body { margin: 0; background: transparent; color: var(--color-text); font-family: var(--font-body); text-wrap: pretty; }
+  a { color: var(--color-accent-700); text-decoration: none; }
+  a:hover { color: var(--color-accent-600); }
+  select.input { appearance: none; background-image: linear-gradient(45deg, transparent 49%, var(--color-accent-700) 51%), linear-gradient(-45deg, transparent 49%, var(--color-accent-700) 51%); background-position: right 18px center, right 11px center; background-size: 7px 7px; background-repeat: no-repeat; padding-right: 38px; }
+</style>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#5980a6"></rect><text x="50" y="58" font-family="sans-serif" font-size="20" font-weight="700" fill="#f2f2f3" text-anchor="middle">BUY</text></svg></template>
+</helmet>
+
+<div style="background: transparent">
+
+  <div aria-hidden="true" style="position: fixed; inset: 0; z-index: -1; display: grid; place-items: center; pointer-events: none; overflow: hidden">
+    <img src="assets/badge-tight.png" alt="" style="width: min(74vw, 74vh); max-width: 1100px; object-fit: contain; opacity: 0.1">
+  </div>
+
+  <nav class="nav" style="position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--color-bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--color-divider); padding-inline: clamp(20px, 5vw, 72px); padding-block: 8px; gap: 24px">
+    <a class="nav-brand" href="index.html" style="display: flex; align-items: center; gap: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text)">
+      <img src="assets/badge-tight.png" alt="Pack Animals" style="width: 58px; height: 58px; object-fit: contain">
+      <span style="display: flex; flex-direction: column; line-height: 1.05">
+        <span>Pack Animals</span>
+        <span style="font-family: var(--font-heading); font-size: 11px; font-weight: 500; letter-spacing: 0.18em; color: var(--color-accent-700)">Find Your Pack</span>
+      </span>
+    </a>
+    <a href="index.html">Home</a>
+    <a href="pups/">Technology</a>
+    <a href="#build" style="color: var(--color-text)">Build a kit</a>
+  </nav>
+
+  <section data-screen-label="Buy intro" style="background: var(--color-accent-900); color: var(--color-bg)">
+    <div style="max-width: 1280px; margin: 0 auto; padding: clamp(44px, 5.5vw, 76px) clamp(20px, 5vw, 72px); display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(28px, 5vw, 72px); align-items: end">
+      <div>
+        <span style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-300)">Build your system</span>
+        <div style="height: 1px; background: rgba(242,242,243,0.28); margin: 12px 0 24px"></div>
+        <h1 style="margin: 0 0 0 -0.052em; font-size: clamp(38px, 5vw, 68px); line-height: 1.02; letter-spacing: 0.01em; text-transform: uppercase">
+          <span style="display: block">PICK YOUR PLATES.</span>
+          <span style="display: block">BUILD YOUR&nbsp;</span>
+          <span style="display: block">QUIVER.</span>
+        </h1>
+      </div>
+      <p style="margin: 0; font-size: 17px; line-height: 1.6; color: rgba(242,242,243,0.82)">Count the skis you want in the system, then the bindings you want to move between them. Configure below and the price updates as you go — bundle discounts apply automatically.</p>
+    </div>
+  </section>
+
+  <section id="build" data-screen-label="Configurator" style="max-width: 1280px; margin: 0 auto; padding: clamp(40px, 5vw, 72px) clamp(20px, 5vw, 72px) clamp(48px, 6vw, 88px); display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(28px, 4vw, 56px); align-items: start">
+
+    <div style="display: grid; gap: clamp(32px, 4vw, 52px)">
+
+      <div>
+        <div style="display: flex; align-items: baseline; gap: 14px">
+          <span style="font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">Step 01</span>
+          <h2 style="margin: 0; font-size: clamp(26px, 2.6vw, 34px); text-transform: uppercase; letter-spacing: 0.02em">Base plates</h2>
+        </div>
+        <div style="height: 1px; background: var(--color-divider); margin: 14px 0 16px"></div>
+        <p style="margin: 0 0 18px; font-size: 15px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 76%, transparent); max-width: 58ch">A base plate set is screwed to each ski, once, and stays there. Choose how many skis you want in the system.</p>
+        <div class="seg" style="display: flex; max-width: 420px">
+          <sc-for list="{{ baseOptions }}" as="o" hint-placeholder-count="3">
+            <label class="seg-opt" style="flex: 1; justify-content: center; background: {{ o.bg }}; color: {{ o.fg }}">
+              <input type="radio" name="baseqty" checked="{{ o.checked }}" onChange="{{ o.select }}">
+              {{ o.label }}
+            </label>
+          </sc-for>
+        </div>
+        <div style="margin-top: 12px; font-size: 14px; color: color-mix(in srgb, var(--color-text) 72%, transparent)">{{ basePriceNote }}</div>
+      </div>
+
+      <div>
+        <div style="display: flex; align-items: baseline; gap: 14px">
+          <span style="font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">Step 02</span>
+          <h2 style="margin: 0; font-size: clamp(26px, 2.6vw, 34px); text-transform: uppercase; letter-spacing: 0.02em">Top plates</h2>
+        </div>
+        <div style="height: 1px; background: var(--color-divider); margin: 14px 0 16px"></div>
+        <p style="margin: 0 0 18px; font-size: 15px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 76%, transparent); max-width: 58ch">Each binding you want to move between skis gets its own top plate set. Pick a material and tell us which binding it will carry.</p>
+        <div class="seg" style="display: flex; max-width: 420px">
+          <sc-for list="{{ topOptions }}" as="o" hint-placeholder-count="2">
+            <label class="seg-opt" style="flex: 1; justify-content: center; background: {{ o.bg }}; color: {{ o.fg }}">
+              <input type="radio" name="topqty" checked="{{ o.checked }}" onChange="{{ o.select }}">
+              {{ o.label }}
+            </label>
+          </sc-for>
+        </div>
+      </div>
+
+      <sc-for list="{{ plates }}" as="p" hint-placeholder-count="1">
+        <div class="blueprint" style="padding: 0">
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; padding: 14px 22px; border-bottom: 1px solid var(--color-divider)">
+            <span style="font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">{{ p.kicker }}</span>
+            <span style="font-family: var(--font-heading); font-size: 22px; text-transform: uppercase; letter-spacing: 0.02em">{{ p.title }}</span>
+            <span class="tag tag-outline" style="margin-left: auto">{{ p.priceLabel }}</span>
+          </div>
+          <div style="padding: 22px; display: grid; gap: 22px">
+            <div>
+              <label style="display: block; font-family: var(--font-heading); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin-bottom: 10px">Material</label>
+              <div class="seg" style="display: flex">
+                <sc-for list="{{ p.materials }}" as="m" hint-placeholder-count="2">
+                  <label class="seg-opt" style="flex: 1; justify-content: center; background: {{ m.bg }}; color: {{ m.fg }}">
+                    <input type="radio" name="{{ m.group }}" checked="{{ m.checked }}" onChange="{{ m.select }}">
+                    {{ m.label }}
+                  </label>
+                </sc-for>
+              </div>
+              <div style="margin-top: 10px; font-size: 14px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 74%, transparent)">{{ p.materialNote }}</div>
+            </div>
+            <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 16px">
+              <div class="field">
+                <label style="font-family: var(--font-heading); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 72%, transparent)">Binding brand</label>
+                <select class="input" value="{{ p.brand }}" onChange="{{ p.setBrand }}">
+                  <sc-for list="{{ brands }}" as="b" hint-placeholder-count="8">
+                    <option value="{{ b }}">{{ b }}</option>
+                  </sc-for>
+                </select>
+              </div>
+              <div class="field">
+                <label style="font-family: var(--font-heading); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 72%, transparent)">Binding model</label>
+                <select class="input" value="{{ p.model }}" onChange="{{ p.setModel }}">
+                  <sc-for list="{{ p.models }}" as="m" hint-placeholder-count="9">
+                    <option value="{{ m }}">{{ m }}</option>
+                  </sc-for>
+                </select>
+              </div>
+            </div>
+          </div>
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        </div>
+      </sc-for>
+
+      <div>
+        <div style="display: flex; align-items: baseline; gap: 14px">
+          <span style="font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">Step 03</span>
+          <h2 style="margin: 0; font-size: clamp(26px, 2.6vw, 34px); text-transform: uppercase; letter-spacing: 0.02em">Add-ons</h2>
+          <span class="tag tag-outline" style="margin-left: auto">Optional</span>
+        </div>
+        <div style="height: 1px; background: var(--color-divider); margin: 14px 0 16px"></div>
+        <p style="margin: 0 0 20px; font-size: 15px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 76%, transparent); max-width: 58ch">Extra sets beyond the build above — another ski, another binding, or a spare. Each appears as its own line item.</p>
+
+        <div style="display: grid; gap: 1px; background: var(--color-divider)">
+          <div style="background: var(--color-bg); display: flex; flex-wrap: wrap; align-items: center; gap: 16px; padding: 18px 0">
+            <div style="flex: 1; min-width: 220px">
+              <div style="font-family: var(--font-heading); font-size: 21px; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.15">Additional base plate set</div>
+              <div style="font-size: 14px; line-height: 1.45; margin-top: 5px; color: color-mix(in srgb, var(--color-text) 74%, transparent)">One more ski in the system — {{ extraBasePriceLabel }}</div>
+            </div>
+            <div style="display: flex; align-items: stretch; border: 1px solid var(--color-divider)">
+              <button type="button" onClick="{{ extraBase.dec }}" style="width: 44px; min-height: 44px; background: transparent; border: 0; border-right: 1px solid var(--color-divider); cursor: pointer; font-family: var(--font-heading); font-size: 20px; color: var(--color-text); opacity: {{ extraBase.decOpacity }}" style-hover="background: color-mix(in srgb, var(--color-text) 6%, transparent)">−</button>
+              <span style="display: grid; place-items: center; min-width: 56px; font-family: var(--font-heading); font-size: 20px; letter-spacing: 0.02em">{{ extraBase.value }}</span>
+              <button type="button" onClick="{{ extraBase.inc }}" style="width: 44px; min-height: 44px; background: transparent; border: 0; border-left: 1px solid var(--color-divider); cursor: pointer; font-family: var(--font-heading); font-size: 20px; color: var(--color-text)" style-hover="background: color-mix(in srgb, var(--color-text) 6%, transparent)">+</button>
+            </div>
+          </div>
+
+          <div style="background: var(--color-bg); display: flex; flex-wrap: wrap; align-items: center; gap: 16px; padding: 18px 0">
+            <div style="flex: 1; min-width: 220px">
+              <div style="font-family: var(--font-heading); font-size: 21px; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.15">Additional top plate set</div>
+              <div style="font-size: 14px; line-height: 1.45; margin-top: 5px; color: color-mix(in srgb, var(--color-text) 74%, transparent)">One more binding on the system — {{ extraTopPriceLabel }}</div>
+              <div class="seg" style="display: flex; max-width: 300px; margin-top: 12px">
+                <sc-for list="{{ extraTopMaterials }}" as="m" hint-placeholder-count="2">
+                  <label class="seg-opt" style="flex: 1; justify-content: center; background: {{ m.bg }}; color: {{ m.fg }}">
+                    <input type="radio" name="{{ m.group }}" checked="{{ m.checked }}" onChange="{{ m.select }}">
+                    {{ m.label }}
+                  </label>
+                </sc-for>
+              </div>
+            </div>
+            <div style="display: flex; align-items: stretch; border: 1px solid var(--color-divider)">
+              <button type="button" onClick="{{ extraTop.dec }}" style="width: 44px; min-height: 44px; background: transparent; border: 0; border-right: 1px solid var(--color-divider); cursor: pointer; font-family: var(--font-heading); font-size: 20px; color: var(--color-text); opacity: {{ extraTop.decOpacity }}" style-hover="background: color-mix(in srgb, var(--color-text) 6%, transparent)">−</button>
+              <span style="display: grid; place-items: center; min-width: 56px; font-family: var(--font-heading); font-size: 20px; letter-spacing: 0.02em">{{ extraTop.value }}</span>
+              <button type="button" onClick="{{ extraTop.inc }}" style="width: 44px; min-height: 44px; background: transparent; border: 0; border-left: 1px solid var(--color-divider); cursor: pointer; font-family: var(--font-heading); font-size: 20px; color: var(--color-text)" style-hover="background: color-mix(in srgb, var(--color-text) 6%, transparent)">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="font-size: 13px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 68%, transparent); max-width: 62ch">Bindings are not included — top plates are pre-drilled for the pattern you select and ship ready to accept your own binding. Don't see yours? <a href="mailto:Info@PackAnimalsSkiCo.com">Tell us the model</a> and we'll confirm the pattern.</div>
+    </div>
+
+    <div style="position: sticky; top: 96px">
+      <div class="blueprint" style="padding: 0">
+        <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; padding: 14px 22px; border-bottom: 1px solid var(--color-divider); font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase">
+          <span style="flex: 1">Your build</span>
+          <span style="color: color-mix(in srgb, var(--color-text) 66%, transparent)">{{ itemCountLabel }}</span>
+        </div>
+
+        <div style="padding: 18px 22px; display: grid; gap: 16px; border-bottom: 1px solid var(--color-divider)">
+          <sc-for list="{{ lines }}" as="l" hint-placeholder-count="2">
+            <div style="display: flex; gap: 14px; align-items: baseline">
+              <div style="flex: 1">
+                <div style="font-family: var(--font-heading); font-size: 18px; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.2">{{ l.label }}</div>
+                <div style="font-size: 13px; line-height: 1.45; margin-top: 4px; color: color-mix(in srgb, var(--color-text) 72%, transparent)">{{ l.detail }}</div>
+              </div>
+              <div style="font-family: var(--font-heading); font-size: 18px; letter-spacing: 0.02em; white-space: nowrap">{{ l.amount }}</div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="padding: 16px 22px; display: grid; gap: 12px; border-bottom: 1px solid var(--color-divider)">
+          <div style="display: flex; gap: 12px; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 74%, transparent)">
+            <span style="flex: 1">Subtotal</span>
+            <span>{{ subtotalLabel }}</span>
+          </div>
+          <sc-for list="{{ discounts }}" as="d" hint-placeholder-count="1">
+            <div style="display: flex; gap: 12px; align-items: baseline">
+              <div style="flex: 1">
+                <div style="font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-accent-700)">{{ d.label }}</div>
+                <div style="font-size: 13px; line-height: 1.4; margin-top: 3px; color: color-mix(in srgb, var(--color-text) 70%, transparent)">{{ d.note }}</div>
+              </div>
+              <div style="font-family: var(--font-heading); font-size: 17px; letter-spacing: 0.02em; white-space: nowrap; color: var(--color-accent-700)">{{ d.amount }}</div>
+            </div>
+          </sc-for>
+          <div style="font-size: 13px; line-height: 1.45; color: color-mix(in srgb, var(--color-text) 66%, transparent)">{{ nextDiscountHint }}</div>
+        </div>
+
+        <div style="padding: 18px 22px 22px">
+          <div style="display: flex; gap: 12px; align-items: baseline">
+            <span style="flex: 1; font-family: var(--font-heading); font-size: 15px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase">Total</span>
+            <span style="font-family: var(--font-heading); font-size: 34px; letter-spacing: 0.02em">{{ totalLabel }}</span>
+          </div>
+          <div style="font-size: 12px; letter-spacing: 0.04em; margin-top: 6px; color: color-mix(in srgb, var(--color-text) 66%, transparent)">Shipping and tax calculated at checkout</div>
+          <button type="button" class="btn btn-primary btn-block" onClick="{{ addToCart }}" style="min-height: 46px; margin-top: 18px; cursor: pointer">Add to cart</button>
+          <button type="button" class="btn btn-ghost btn-block" onClick="{{ copySpec }}" style="min-height: 40px; margin-top: 8px; cursor: pointer">{{ copyLabel }}</button>
+        </div>
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      </div>
+
+      <div style="display: grid; gap: 1px; margin-top: 22px; background: var(--color-divider)">
+        <sc-for list="{{ dealList }}" as="d" hint-placeholder-count="3">
+          <div style="background: var(--color-bg); padding: 14px 0; display: flex; gap: 14px; align-items: baseline">
+            <span style="font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: {{ d.color }}; min-width: 5ch">{{ d.state }}</span>
+            <span style="flex: 1; font-size: 14px; line-height: 1.45; color: color-mix(in srgb, var(--color-text) 78%, transparent)">{{ d.text }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ cartOpen }}" hint-placeholder-val="{{ false }}">
+    <div class="dialog-backdrop" style="position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; padding: clamp(16px, 4vw, 48px); background: color-mix(in srgb, #1d2d3d 62%, transparent); overflow: auto">
+      <div class="dialog blueprint elev-lg" style="position: relative; width: min(680px, 100%); max-width: 680px; background: var(--color-bg); padding: 0">
+        <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; padding: 16px 26px; border-bottom: 1px solid var(--color-divider)">
+          <span style="font-family: var(--font-heading); font-size: 15px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; flex: 1">Your cart</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 66%, transparent)">{{ cart.count }} sets</span>
+          <button type="button" onClick="{{ closeCart }}" style="background: transparent; border: 0; cursor: pointer; font-family: var(--font-heading); font-size: 22px; line-height: 1; color: color-mix(in srgb, var(--color-text) 70%, transparent); padding: 0 0 0 10px" style-hover="color: var(--color-text)">×</button>
+        </div>
+
+        <div style="padding: 20px 26px; display: grid; gap: 18px; border-bottom: 1px solid var(--color-divider)">
+          <sc-for list="{{ cart.lines }}" as="l" hint-placeholder-count="2">
+            <div style="display: flex; gap: 16px; align-items: baseline">
+              <div style="flex: 1">
+                <div style="font-family: var(--font-heading); font-size: 20px; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.2">{{ l.label }}</div>
+                <div style="font-size: 13px; line-height: 1.45; margin-top: 4px; color: color-mix(in srgb, var(--color-text) 72%, transparent)">{{ l.detail }}</div>
+              </div>
+              <div style="font-family: var(--font-heading); font-size: 20px; letter-spacing: 0.02em; white-space: nowrap">{{ l.amount }}</div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="padding: 16px 26px; display: grid; gap: 10px; border-bottom: 1px solid var(--color-divider)">
+          <div style="display: flex; gap: 12px; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 74%, transparent)">
+            <span style="flex: 1">Subtotal</span>
+            <span>{{ cart.subtotalLabel }}</span>
+          </div>
+          <sc-for list="{{ cart.discounts }}" as="d" hint-placeholder-count="1">
+            <div style="display: flex; gap: 12px; align-items: baseline; color: var(--color-accent-700)">
+              <span style="flex: 1; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase">{{ d.label }}</span>
+              <span style="font-family: var(--font-heading); font-size: 17px; letter-spacing: 0.02em">{{ d.amount }}</span>
+            </div>
+          </sc-for>
+          <div style="display: flex; gap: 12px; align-items: baseline; margin-top: 4px">
+            <span style="flex: 1; font-family: var(--font-heading); font-size: 15px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase">Total</span>
+            <span style="font-family: var(--font-heading); font-size: 32px; letter-spacing: 0.02em">{{ cart.totalLabel }}</span>
+          </div>
+        </div>
+
+        <div style="padding: 20px 26px; background: var(--color-accent-900); color: var(--color-bg)">
+          <span style="display: block; font-family: var(--font-heading); font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-300)">Checkout</span>
+          <div style="font-family: var(--font-heading); font-size: clamp(24px, 3vw, 32px); text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.1; margin-top: 8px">Accepting preorders<br>December 2026</div>
+          <p style="margin: 12px 0 0; font-size: 15px; line-height: 1.55; color: rgba(242,242,243,0.82); max-width: 52ch">Payment isn't open yet. Send us this build and we'll hold your place in the first production run — no deposit, no obligation, and you'll be first to hear when checkout goes live.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px">
+            <a class="btn btn-primary" href="{{ cart.href }}" style="text-decoration: none; min-height: 44px; padding-inline: 22px">Reserve this build</a>
+            <button type="button" class="btn" onClick="{{ closeCart }}" style="min-height: 44px; padding-inline: 22px; cursor: pointer; color: var(--color-bg); border-color: rgba(242,242,243,0.4); background: transparent">Keep building</button>
+          </div>
+        </div>
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl" style="color: rgba(242,242,243,0.6)"></i><i class="corner br" style="color: rgba(242,242,243,0.6)"></i>
+      </div>
+    </div>
+  </sc-if>
+
+  <footer style="border-top: 1px solid var(--color-divider)">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 28px clamp(20px, 5vw, 72px); display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; font-size: 13px; color: color-mix(in srgb, var(--color-text) 70%, transparent)">
+      <span>Pack Animals Ski Co. — Anchorage, Alaska</span>
+      <a href="mailto:Info@PackAnimalsSkiCo.com">Info@PackAnimalsSkiCo.com</a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280},&quot;basePrice&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:125,&quot;tsType&quot;:&quot;number&quot;,&quot;unit&quot;:&quot;$&quot;,&quot;section&quot;:&quot;Pricing&quot;},&quot;alPrice&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:179,&quot;tsType&quot;:&quot;number&quot;,&quot;unit&quot;:&quot;$&quot;,&quot;section&quot;:&quot;Pricing&quot;},&quot;cfPrice&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:429,&quot;tsType&quot;:&quot;number&quot;,&quot;unit&quot;:&quot;$&quot;,&quot;section&quot;:&quot;Pricing&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#5980a6&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#5980a6&quot;,&quot;#416180&quot;,&quot;#1d2d3d&quot;],&quot;section&quot;:&quot;Theme&quot;}}">
+const BINDINGS = {
+  Marker: ['Griffon 13 ID', 'Squire 11', 'Squire 10', 'Jester 18 Pro', 'Griffon X MWerks 13', 'Jester 16 ID', 'Griffon X 13', 'Squire 12 TCX', 'Jester X MWerks 16', 'Duke PT 16', 'Duke PT 11', 'Duke PT 13', 'Griffon 13 MN', 'Kingpin M-Werks', 'Kingpin 10', 'Kingpin 13', 'Alpinist Free 11', 'Alpinist Free 12', 'Alpinist Free 13', 'Cruise 10'],
+  Salomon: ['Strive 12 GW', 'Strive 14 GW', 'Strive 14 MN', 'Strive 16 MN', 'S/Lab Shift² MN 10', 'S/Lab Shift² MN 13', 'S/Lab Shift² MN 16', 'MTN Pure', 'MTN Pure Brakeless'],
+  Atomic: ['Strive 12 GW', 'Strive 14 GW', 'Strive 14 MN', 'Strive 16 MN', 'S/Lab Shift² MN 10', 'S/Lab Shift² MN 13', 'S/Lab Shift² MN 16', 'Backland Summit 9', 'Backland Summit 12'],
+  Armada: ['Strive 12 GW', 'Strive 14 GW', 'Strive 14 MN', 'Strive 16 MN', 'S/Lab Shift² MN 10', 'S/Lab Shift² MN 13', 'S/Lab Shift² MN 16', 'Armada Tracer Tour'],
+  Look: ['SPX 11 GW', 'SPX 12 GW Pro', 'SPX 13 GW', 'Pivot 2.0 11 GW', 'Pivot 2.0 13 GW', 'Pivot 2.0 15 GW', 'Pivot 2.0 18 GW'],
+  Tyrolia: ['Attack 14 GW', 'Attack 17 GW', 'Attack LYT 9 GW', 'Attack LYT 11 GW', 'Protector Attack LYT 13 GW', 'Protector PR 11 GW', 'Protector PR 13 GW', 'Attack Hybrid 11 MN', 'Attack Hybrid 14 MN'],
+  ATK: ['Candy 5', 'Crest 10', 'RT 11 EVO', 'Raider 10 SL', 'Raider 12 SL', 'Raider 12 AP', 'Raider 11 Evo', 'Raider 13 Evo', 'Freeraider 14 SL', 'Freeraider 15 Evo', 'HY 11 Free', 'HY 13 Free', 'Newmark Lite'],
+  Dynafit: ['ST Rotation 10', 'ST Rotation 14', 'Seven Summits', 'Seven Summits+', 'Radical', 'Ridge', 'Blacklight Pro', 'Blacklight Carbon', 'Blacklight Carbon Pro'],
+  Bishop: ['BMF/3', 'BMF/R'],
+  '22Designs': ['Bandit', 'Outlaw X', 'Lynx', 'AXL'],
+  Voile: ['TTS Transit', 'Switchback X2', 'Switchback']
+};
+
+class Component extends DCLogic {
+  state = {
+    baseQty: 1,
+    topQty: 1,
+    extraBase: 0,
+    extraTop: 0,
+    extraTopMaterial: 'AL',
+    cart: null,
+    plates: [
+      { material: 'AL', brand: 'Marker', model: 'Griffon 13 ID' },
+      { material: 'AL', brand: 'Marker', model: 'Griffon 13 ID' }
+    ],
+    copied: false
+  };
+
+  money(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+
+  setPlate(i, patch) {
+    this.setState((s) => {
+      const plates = s.plates.map((p, k) => (k === i ? { ...p, ...patch } : p));
+      return { plates, copied: false };
+    });
+  }
+
+  renderVals() {
+    const accent = this.props.accent ?? '#5980a6';
+    const basePrice = this.props.basePrice ?? 125;
+    const alPrice = this.props.alPrice ?? 179;
+    const cfPrice = this.props.cfPrice ?? 429;
+    const { baseQty, topQty } = this.state;
+    const active = this.state.plates.slice(0, topQty);
+    const priceOf = (m) => (m === 'CF' ? cfPrice : alPrice);
+    const nameOf = (m) => (m === 'CF' ? 'Carbon fiber' : 'Aluminum');
+
+    const seg = (on) => ({ bg: on ? accent : 'transparent', fg: on ? 'var(--color-bg)' : 'var(--color-text)' });
+
+    const baseOptions = [1, 2, 3].map((v) => ({
+      label: v === 1 ? '1 ski' : v + ' skis',
+      checked: baseQty === v,
+      ...seg(baseQty === v),
+      select: () => this.setState({ baseQty: v, copied: false })
+    }));
+
+    const topOptions = [1, 2].map((v) => ({
+      label: v === 1 ? '1 binding' : '2 bindings',
+      checked: topQty === v,
+      ...seg(topQty === v),
+      select: () => this.setState({ topQty: v, copied: false })
+    }));
+
+    const plates = active.map((p, i) => ({
+      kicker: 'Top plate ' + (i + 1),
+      title: nameOf(p.material),
+      priceLabel: this.money(priceOf(p.material)),
+      materialNote: p.material === 'CF'
+        ? 'Carbon fiber — the lightest set, for touring setups where every gram is counted.'
+        : '7075 aluminium — the same alloy as your binding, and the value pick for resort use.',
+      materials: [
+        { label: 'Aluminum', group: 'mat' + i, checked: p.material === 'AL', ...seg(p.material === 'AL'), select: () => this.setPlate(i, { material: 'AL' }) },
+        { label: 'Carbon fiber', group: 'mat' + i, checked: p.material === 'CF', ...seg(p.material === 'CF'), select: () => this.setPlate(i, { material: 'CF' }) }
+      ],
+      brand: p.brand,
+      model: p.model,
+      models: BINDINGS[p.brand],
+      setBrand: (e) => this.setPlate(i, { brand: e.target.value, model: BINDINGS[e.target.value][0] }),
+      setModel: (e) => this.setPlate(i, { model: e.target.value })
+    }));
+
+    const xBase = this.state.extraBase;
+    const xTop = this.state.extraTop;
+    const xTopMat = this.state.extraTopMaterial;
+    const baseTotal = baseQty * basePrice;
+    const topTotal = active.reduce((sum, p) => sum + priceOf(p.material), 0);
+    const xBaseTotal = xBase * basePrice;
+    const xTopTotal = xTop * priceOf(xTopMat);
+    const subtotal = baseTotal + topTotal + xBaseTotal + xTopTotal;
+
+    const stepper = (key, value) => ({
+      value: String(value),
+      dec: () => this.setState({ [key]: Math.max(0, value - 1), copied: false }),
+      inc: () => this.setState({ [key]: Math.min(6, value + 1), copied: false }),
+      decOpacity: value === 0 ? '0.35' : '1'
+    });
+
+    const lines = (baseQty > 0 ? [{
+      label: baseQty + ' × base plate set',
+      detail: 'One set per ski at ' + this.money(basePrice) + ' — covers ' + baseQty + (baseQty === 1 ? ' ski' : ' skis'),
+      amount: this.money(baseTotal)
+    }] : []).concat(active.map((p) => ({
+      label: nameOf(p.material) + ' top plate set',
+      detail: p.brand + ' ' + p.model,
+      amount: this.money(priceOf(p.material))
+    })), xBase > 0 ? [{
+      label: xBase + ' × additional base plate set',
+      detail: 'Spare sets at ' + this.money(basePrice) + ' each',
+      amount: this.money(xBaseTotal)
+    }] : [], xTop > 0 ? [{
+      label: xTop + ' × additional ' + nameOf(xTopMat).toLowerCase() + ' top plate set',
+      detail: 'Binding pattern confirmed by email at ' + this.money(priceOf(xTopMat)) + ' each',
+      amount: this.money(xTopTotal)
+    }] : []);
+
+    const cfCount = active.filter((p) => p.material === 'CF').length;
+    const alCount = active.filter((p) => p.material === 'AL').length;
+    const discounts = [];
+    if (baseQty >= 2 && cfCount >= 1) {
+      discounts.push({ label: 'Carbon system pack', note: 'Carbon top plates with two or more skis — $58 off', value: 58 });
+    } else if (baseQty >= 2 && alCount >= 2) {
+      discounts.push({ label: 'System pack', note: 'Two aluminum top plates with two or more skis — $50 off', value: 50 });
+    } else if (baseQty >= 2 && topQty === 1) {
+      discounts.push({ label: 'Multi-ski pack', note: 'One binding with two or more skis — $30 off', value: 30 });
+    }
+
+    const discountTotal = discounts.reduce((s, d) => s + d.value, 0);
+    const total = subtotal - discountTotal;
+
+    let hint = 'All eligible bundle discounts are applied.';
+    if (baseQty < 2) hint = 'Two or more skis unlocks a bundle discount — $30 off with one binding, $50 with two aluminum, $58 with carbon.';
+    else if (cfCount === 0 && alCount < 2) hint = 'Add a second aluminum top plate for $50 off, or switch to carbon for $58 off.';
+
+    const specLines = lines.map((l) => l.label + ' — ' + l.detail + ' — ' + l.amount)
+      .concat(discounts.map((d) => d.label + ' — ' + d.note + ' — −' + this.money(d.value)))
+      .concat(['Total — ' + this.money(total)]);
+    const spec = 'PUPS build\n\n' + specLines.join('\n');
+
+    return {
+      brands: Object.keys(BINDINGS),
+      baseOptions,
+      topOptions,
+      plates,
+      basePriceNote: 'Sold as a set per ski — ' + this.money(basePrice) + ' covers one ski, both feet.',
+      lines,
+      discounts: discounts.map((d) => ({ label: d.label, note: d.note, amount: '−' + this.money(d.value) })),
+      nextDiscountHint: hint,
+      itemCountLabel: (baseQty + topQty + xBase + xTop) + (baseQty + topQty + xBase + xTop === 1 ? ' set' : ' sets'),
+      extraBase: stepper('extraBase', xBase),
+      extraTop: stepper('extraTop', xTop),
+      extraBasePriceLabel: this.money(basePrice) + ' each',
+      extraTopPriceLabel: this.money(priceOf(xTopMat)) + ' each',
+      extraTopMaterials: [
+        { label: 'Aluminum', group: 'xmat', checked: xTopMat === 'AL', ...seg(xTopMat === 'AL'), select: () => this.setState({ extraTopMaterial: 'AL', copied: false }) },
+        { label: 'Carbon fiber', group: 'xmat', checked: xTopMat === 'CF', ...seg(xTopMat === 'CF'), select: () => this.setState({ extraTopMaterial: 'CF', copied: false }) }
+      ],
+      subtotalLabel: this.money(subtotal),
+      totalLabel: this.money(total),
+      orderHref: 'mailto:Info@PackAnimalsSkiCo.com?subject=' + encodeURIComponent('PUPS order — ' + this.money(total)) + '&body=' + encodeURIComponent(spec + '\n\nName:\nShipping address:\n'),
+      addToCart: () => this.setState({
+        cart: {
+          lines,
+          discounts: discounts.map((d) => ({ label: d.label, note: d.note, amount: '−' + this.money(d.value) })),
+          subtotalLabel: this.money(subtotal),
+          totalLabel: this.money(total),
+          count: baseQty + topQty + xBase + xTop,
+          href: 'mailto:Info@PackAnimalsSkiCo.com?subject=' + encodeURIComponent('PUPS preorder — ' + this.money(total)) + '&body=' + encodeURIComponent(spec + '\n\nName:\nShipping address:\n')
+        }
+      }),
+      cartOpen: !!this.state.cart,
+      cart: this.state.cart || { lines: [], discounts: [], subtotalLabel: '', totalLabel: '', count: 0, href: '#' },
+      closeCart: () => this.setState({ cart: null }),
+      copyLabel: this.state.copied ? 'Copied to clipboard' : 'Copy build spec',
+      copySpec: () => {
+        navigator.clipboard && navigator.clipboard.writeText(spec);
+        this.setState({ copied: true });
+      },
+      dealList: [
+        { text: 'Multi-ski pack — 2 or more skis with 1 binding takes $30 off.', on: baseQty >= 2 && topQty === 1 && cfCount === 0 },
+        { text: 'System pack — 2 or more skis with 2 aluminum top plates takes $50 off.', on: baseQty >= 2 && cfCount === 0 && alCount >= 2 },
+        { text: 'Carbon system pack — 2 or more skis with any carbon top plate takes $58 off.', on: baseQty >= 2 && cfCount >= 1 }
+      ].map((d) => ({
+        text: d.text,
+        state: d.on ? 'On' : '—',
+        color: d.on ? 'var(--color-accent-700)' : 'color-mix(in srgb, var(--color-text) 45%, transparent)'
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>
