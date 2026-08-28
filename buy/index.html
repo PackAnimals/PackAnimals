@@ -481,7 +481,7 @@ class Component extends DCLogic {
       baseOptions,
       topOptions,
       plates,
-      basePriceNote: 'Sold as a set per ski — ' + this.money(basePrice) + ' covers one ski, both feet.',
+      basePriceNote: 'Sold as a set per ski — ' + this.money(basePrice) + ' covers one set of skis.',
       lines,
       discounts: discounts.map((d) => ({ label: d.label, note: d.note, amount: '−' + this.money(d.value) })),
       nextDiscountHint: hint,
