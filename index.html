@@ -3,22 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<script src="../support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
-<link rel="stylesheet" href="_ds/industry-5a41f639-a2b8-4ab7-b0c3-873e21fbab49/styles.css">
-<script src="_ds/industry-5a41f639-a2b8-4ab7-b0c3-873e21fbab49/_ds_bundle.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&amp;family=Barlow+Condensed:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../_ds/industry-5a41f639-a2b8-4ab7-b0c3-873e21fbab49/styles.css">
+<script src="../_ds/industry-5a41f639-a2b8-4ab7-b0c3-873e21fbab49/_ds_bundle.js"></script>
 <style>
-  html { scroll-behavior: smooth; }
-  html { background: var(--color-bg); }
+  html { background: var(--color-bg); scroll-behavior: smooth; }
   body { margin: 0; background: transparent; color: var(--color-text); font-family: var(--font-body); text-wrap: pretty; }
   a { color: var(--color-accent-700); text-decoration: none; }
   a:hover { color: var(--color-accent-600); }
-  :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
-  input[type="range"] { accent-color: var(--color-accent); }
 
   @media (max-width: 900px) {
     [style*="grid-template-columns"] { grid-template-columns: minmax(0, 1fr) !important; }
@@ -34,77 +30,54 @@
     .seg-opt { min-width: 44%; }
   }
 </style>
-<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#5980a6"/><text x="50" y="60" font-family="Barlow Condensed, sans-serif" font-size="30" font-weight="700" fill="#f2f2f3" text-anchor="middle">PUPS</text></svg></template>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#5980a6"></rect><text x="50" y="58" font-family="sans-serif" font-size="22" font-weight="700" fill="#f2f2f3" text-anchor="middle">PUPS</text></svg></template>
 </helmet>
 
 <div style="background: transparent">
 
   <div aria-hidden="true" style="position: fixed; inset: 0; z-index: -1; display: grid; place-items: center; pointer-events: none; overflow: hidden">
-    <img src="assets/badge-tight.png" alt="" style="width: min(74vw, 74vh); max-width: 1100px; object-fit: contain; opacity: 0.1">
+    <img src="../assets/badge-tight.png" alt="" style="width: min(74vw, 74vh); max-width: 1100px; object-fit: contain; opacity: 0.1">
   </div>
 
   <nav class="nav" style="position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--color-bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--color-divider); padding-inline: clamp(20px, 5vw, 72px); padding-block: 8px; gap: 24px">
-    <span class="nav-brand" style="display: flex; align-items: center; gap: 14px; letter-spacing: 0.06em; text-transform: uppercase">
-      <img src="assets/badge-tight.png" alt="Pack Animals" style="width: 58px; height: 58px; object-fit: contain">
+    <a class="nav-brand" href="../index.html" style="display: flex; align-items: center; gap: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text)">
+      <img src="../assets/badge-tight.png" alt="Pack Animals" style="width: 58px; height: 58px; object-fit: contain">
       <span style="display: flex; flex-direction: column; line-height: 1.05">
         <span>Pack Animals</span>
         <span style="font-family: var(--font-heading); font-size: 11px; font-weight: 500; letter-spacing: 0.18em; color: var(--color-accent-700)">Find Your Pack</span>
       </span>
-    </span>
-    <a href="#install">Install</a>
-    <a href="#quiver">Quiver math</a>
-    <a href="pups/">Technology</a>
-    <a href="buy/">Buy</a>
-    <a href="#specs">Specs</a>
-    <a class="btn btn-primary" href="buy/" style="text-decoration: none">Buy PUPS</a>
+    </a>
+    <a href="../index.html">Home</a>
+    <a href="../buy/">Buy</a>
+    <a href="#sequence">Install</a>
+    <a href="#interface">Interface</a>
+    <a href="#fit">Fit</a>
+    <a href="#stance">Stance</a>
+    <a href="#stack">Stack</a>
+    <a class="btn btn-primary" href="../buy/" style="text-decoration: none">Buy PUPS</a>
   </nav>
 
-  <section data-screen-label="Hero" style="background: var(--color-accent-900); color: var(--color-bg)">
-    <div style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px); display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 72px); align-items: center; min-height: 80vh">
-      <div style="padding: 72px 0">
-        <span style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-300)">Precision Universal Plate System</span>
+  <section data-screen-label="Intro" style="background: var(--color-accent-900); color: var(--color-bg)">
+    <div style="max-width: 1280px; margin: 0 auto; padding: clamp(56px, 7vw, 104px) clamp(20px, 5vw, 72px); display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 72px); align-items: center">
+      <div>
+        <span style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-300)">The technology</span>
         <div style="height: 1px; background: rgba(242,242,243,0.28); margin: 12px 0 24px"></div>
-        <h1 style="margin: 0 0 0 -0.052em; font-size: clamp(44px, 6.2vw, 88px); line-height: 1.02; letter-spacing: 0.01em; text-transform: uppercase">
-          <span style="display: block">Any ski.</span>
-          <span style="display: block">Any binding.</span>
-          <span style="display: block">Any time.</span>
+        <h1 style="margin: 0 0 0 -0.052em; font-size: clamp(40px, 5.4vw, 76px); line-height: 1.02; letter-spacing: 0.01em; text-transform: uppercase">
+          <span style="display: block">One System.</span>
+          <span style="display: block">Unlock your whole quiver.</span>
         </h1>
-        <p style="margin: 22px 0 0; font-family: var(--font-heading); font-size: clamp(20px, 2.2vw, 28px); font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-300)">Find Your Pack</p>
-        <p style="margin: 28px 0 0; max-width: 46ch; font-size: 17px; line-height: 1.55; color: rgba(242,242,243,0.82)">Mount a base plate to each ski once. From then on any binding goes on any ski in seconds — alpine, touring, telemark. Now your quiver grows exponentially.</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px">
-          <a class="btn btn-primary" href="buy/" style="text-decoration: none; min-height: 42px; padding-inline: 22px">Order a plate set</a>
-          <a class="btn" href="#install" style="text-decoration: none; min-height: 42px; padding-inline: 22px; color: var(--color-bg); border-color: rgba(242,242,243,0.4); background: transparent">See the swap</a>
-        </div>
+        <p style="margin: 26px 0 0; max-width: 54ch; font-size: 17px; line-height: 1.6; color: rgba(242,242,243,0.82)">PUPS — the Precision Universal Plate System — is a two-piece mechanical interface that lives between your ski and your binding. A base plate mounts to each ski, just like a traditional binding. A top plate carries each binding. The two halves mechanically engage on three axes and lock in place. Now, your binding becomes something you move rather than something you mount.</p>
+        <p style="margin: 18px 0 0; max-width: 54ch; font-size: 17px; line-height: 1.6; color: rgba(242,242,243,0.82)">Simple to use. No compromises. The setup you want, when you need it.</p>
       </div>
       <figure class="blueprint" style="margin: 0; border-color: rgba(242,242,243,0.3)">
-        <video src="assets/Demo%20Vid%20Compressed.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" poster="assets/hero-two-bindings.png" style="display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--color-accent-900)"></video>
+        <video src="../assets/Demo%20Vid%20Compressed.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" poster="../assets/pups-ski-mounted.jpg" style="display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--color-accent-900)"></video>
         <i class="corner tl" style="color: rgba(242,242,243,0.6)"></i><i class="corner tr" style="color: rgba(242,242,243,0.6)"></i><i class="corner bl" style="color: rgba(242,242,243,0.6)"></i><i class="corner br" style="color: rgba(242,242,243,0.6)"></i>
       </figure>
     </div>
-    <div style="border-top: 1px solid rgba(242,242,243,0.22)">
-      <div style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px); display: grid; grid-template-columns: repeat(4, 1fr)">
-        <div style="padding: 20px 20px 20px 0; border-right: 1px solid rgba(242,242,243,0.22)">
-          <div style="font-family: var(--font-heading); font-size: 30px; letter-spacing: 0.02em">8 MM</div>
-          <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-300); margin-top: 4px">Stack height</div>
-        </div>
-        <div style="padding: 20px; border-right: 1px solid rgba(242,242,243,0.22)">
-          <div style="font-family: var(--font-heading); font-size: 30px; letter-spacing: 0.02em">7075</div>
-          <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-300); margin-top: 4px">Aluminum top plate</div>
-        </div>
-        <div style="padding: 20px; border-right: 1px solid rgba(242,242,243,0.22)">
-          <div style="font-family: var(--font-heading); font-size: 30px; letter-spacing: 0.02em">± 2 CM</div>
-          <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-300); margin-top: 4px">Dynamic mount point</div>
-        </div>
-        <div style="padding: 20px">
-          <div style="font-family: var(--font-heading); font-size: 30px; letter-spacing: 0.02em">3 AXES</div>
-          <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-300); margin-top: 4px">Triaxial engagement</div>
-        </div>
-      </div>
-    </div>
   </section>
 
-  <section id="install" data-screen-label="Install" style="max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 100px) clamp(20px, 5vw, 72px) 0">
-    <span style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">01 · The install, filmed</span>
+  <section id="sequence" data-screen-label="Install sequence" style="max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 100px) clamp(20px, 5vw, 72px) 0">
+    <span style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">01 · Installation</span>
     <div style="height: 1px; background: var(--color-divider); margin: 12px 0 40px"></div>
     <div style="display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(20px, 4vw, 56px); align-items: end; margin-bottom: 32px">
       <h2 style="margin: 0; font-size: clamp(30px, 3.6vw, 48px); line-height: 1.04; text-transform: uppercase; letter-spacing: 0.01em">Four moves,<br>then you ski</h2>
@@ -121,9 +94,9 @@
       </figure>
       <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 28px; border-top: 1px solid var(--color-divider)">
         <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
-          <button type="button" onClick="{{ s.select }}" style="display: block; text-align: left; background: transparent; border: 0; border-top: 3px solid {{ s.bar }}; padding: 18px 20px 20px 0; margin-top: -1px; cursor: pointer; font-family: var(--font-body); color: var(--color-text)" style-hover="background: color-mix(in srgb, var(--color-text) 5%, transparent)">
+          <button type="button" onClick="{{ s.select }}" style="display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; text-align: left; background: transparent; border: 0; border-top: 3px solid {{ s.bar }}; padding: 18px 20px 20px 0; margin-top: -1px; cursor: pointer; font-family: var(--font-body); color: var(--color-text)" style-hover="background: color-mix(in srgb, var(--color-text) 5%, transparent)">
             <span style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; color: var(--color-accent-700)">{{ s.n }}</span>
-            <span style="display: block; font-family: var(--font-heading); font-size: 21px; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.15; margin-top: 8px">{{ s.title }}</span>
+            <span style="display: block; font-family: var(--font-heading); font-size: 21px; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.15; margin-top: 8px; min-height: 2.3em">{{ s.title }}</span>
             <span style="display: block; font-size: 14px; line-height: 1.5; margin-top: 8px; color: color-mix(in srgb, var(--color-text) 74%, transparent)">{{ s.body }}</span>
           </button>
         </sc-for>
@@ -131,103 +104,119 @@
     </div>
   </section>
 
-  <section id="quiver" data-screen-label="Quiver math" style="max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 100px) clamp(20px, 5vw, 72px) 0">
-    <span style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">02 · Quiver math</span>
+  <section id="interface" data-screen-label="Triaxial interface" style="max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 100px) clamp(20px, 5vw, 72px) 0">
+    <span style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">02 · Triaxial engagement</span>
     <div style="height: 1px; background: var(--color-divider); margin: 12px 0 40px"></div>
-    <div class="blueprint" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr)">
-      <div style="padding: clamp(24px, 3vw, 40px); border-right: 1px solid var(--color-divider)">
-        <h2 style="margin: 0 0 8px; font-size: clamp(26px, 2.6vw, 34px); text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.1">Count your setups</h2>
-        <p style="margin: 0 0 32px; font-size: 15px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 76%, transparent)">Set your quiver. The number opposite is how many ski-and-binding combinations you can actually ride.</p>
-        <label style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">Skis — {{ skis }}</label>
-        <input type="range" min="1" max="8" step="1" value="{{ skis }}" onChange="{{ setSkis }}" style="width: 100%; margin: 12px 0 28px">
-        <label style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">Bindings — {{ bindings }}</label>
-        <input type="range" min="1" max="5" step="1" value="{{ bindings }}" onChange="{{ setBindings }}" style="width: 100%; margin: 12px 0 0">
-      </div>
-      <div style="padding: clamp(24px, 3vw, 40px); display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
-        <div style="display: flex; align-items: baseline; gap: 14px">
-          <span style="font-family: var(--font-heading); font-size: clamp(60px, 8vw, 116px); line-height: 0.9">{{ combos }}</span>
-          <span style="font-family: var(--font-heading); font-size: 15px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">rideable<br>combinations<br></span>
-        </div>
-        <table class="table" style="width: 100%">
-          <tbody>
-            <tr><td style="font-size: 14px">Without PUPS</td><td style="font-family: var(--font-heading); font-size: 20px; text-align: right">{{ skis }} setups</td></tr>
-            <tr><td style="font-size: 14px">Base plate sets to buy</td><td style="font-family: var(--font-heading); font-size: 20px; text-align: right">{{ skis }}</td></tr>
-            <tr><td style="font-size: 14px">Top plate sets to buy</td><td style="font-family: var(--font-heading); font-size: 20px; text-align: right">{{ bindings }}</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-    </div>
-  </section>
-
-  <section id="tech" data-screen-label="Technology" style="max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 100px) clamp(20px, 5vw, 72px) 0">
-    <span style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">03 · Simple design, advanced technology</span>
-    <div style="height: 1px; background: var(--color-divider); margin: 12px 0 40px"></div>
-
-    <div style="display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(28px, 4vw, 64px); align-items: center; margin-bottom: clamp(40px, 5vw, 72px)">
+    <div style="display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(28px, 4vw, 64px); align-items: center">
       <figure class="blueprint" style="margin: 0">
-        <img src="assets/interface-detail.jpg" alt="Top plate engaged into the base plate" style="display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover">
+        <img src="../assets/interface-detail.jpg" alt="Top plate engaged into the base plate" style="display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover">
         <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
       </figure>
       <div>
-        <h3 style="margin: 0; font-size: clamp(26px, 2.6vw, 34px); text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.1">Triaxial engagement</h3>
-        <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 78%, transparent); max-width: 48ch">Rotate the top plate into place and it locks against vertical, horizontal and lateral load at once — a mechanically engaged connection, then the pins go in. No slop, no creep, nothing to feel but the snow.</p>
-      </div>
-    </div>
-
-    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 40px)">
-      <div class="blueprint" style="padding: 22px">
-        <h3 style="margin: 0; font-family: var(--font-heading); font-size: 22px; text-transform: uppercase; letter-spacing: 0.02em">Universal fit</h3>
-        <p style="margin: 14px 0 0; font-size: 15px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 78%, transparent)">Top plates are pre-drilled for the most popular alpine, touring and telemark patterns. Your binding of choice, any day of the week.</p>
-        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-      </div>
-      <div class="blueprint" style="padding: 22px">
-        <h3 style="margin: 0; font-family: var(--font-heading); font-size: 22px; text-transform: uppercase; letter-spacing: 0.02em">Dynamic mount point</h3>
-        <p style="margin: 14px 0 0; font-size: 15px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 78%, transparent)">Mount up to ±2 cm* off the recommended line. Park laps at +1.5, big lines at 0 — swapped in minutes, on the same ski.</p>
-        <div style="margin-top: 20px">
-          <div class="seg" style="display: flex; width: 100%">
-            <sc-for list="{{ offsets }}" as="o" hint-placeholder-count="5">
-              <label class="seg-opt" style="flex: 1; justify-content: center; background: {{ o.bg }}; color: {{ o.fg }}">
-                <input type="radio" name="mountpoint" checked="{{ o.checked }}" onChange="{{ o.select }}">
-                {{ o.label }}
-              </label>
-            </sc-for>
-          </div>
-          <div style="margin-top: 14px; font-size: 14px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 78%, transparent)">{{ offsetNote }}</div>
-          <div style="margin-top: 10px; font-size: 12px; letter-spacing: 0.04em; color: color-mix(in srgb, var(--color-text) 70%, transparent)">* Binding brand dependent</div>
+        <h2 style="margin: 0; font-size: clamp(28px, 3vw, 40px); text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.06">The connection<br>is mechanical</h2>
+        <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 80%, transparent); max-width: 50ch">Rotate the top plate onto the base plate and the interface engages against vertical, horizontal, and lateral loads simultaneously. Nothing relies on clamping force or friction — the geometry itself carries the load, then the locking pins drop in and the two plates behave as one piece.</p>
+        <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 80%, transparent); max-width: 50ch">What that means underfoot: no slop when you load an edge, no creep over a season, and no hollow, floating feel between boot and ski. It transmits like a directly mounted binding because, mechanically, it is one.</p>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 28px; background: var(--color-divider)">
+          <sc-for list="{{ axes }}" as="a" hint-placeholder-count="3">
+            <div style="background: var(--color-bg); padding: 16px 14px">
+              <span style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">{{ a.axis }}</span>
+              <span style="display: block; font-size: 14px; line-height: 1.45; margin-top: 8px; color: color-mix(in srgb, var(--color-text) 76%, transparent)">{{ a.note }}</span>
+            </div>
+          </sc-for>
         </div>
-        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-      </div>
-      <div class="blueprint" style="padding: 22px">
-        <h3 style="margin: 0; font-family: var(--font-heading); font-size: 22px; text-transform: uppercase; letter-spacing: 0.02em">Leveraged position</h3>
-        <p style="margin: 14px 0 0; font-size: 15px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 78%, transparent)">Thin is in. 8 mm of stack — thinner than your phone — over a wider footprint than a standard binding, so more of your input reaches the edge.</p>
-        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
       </div>
     </div>
   </section>
 
-  <section id="specs" data-screen-label="Specs" style="max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 100px) clamp(20px, 5vw, 72px) 0">
-    <span style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">04 · Data sheet</span>
+  <section id="fit" data-screen-label="Universal fit" style="max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 100px) clamp(20px, 5vw, 72px) 0">
+    <span style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">03 · Universal fit</span>
     <div style="height: 1px; background: var(--color-divider); margin: 12px 0 40px"></div>
-    <div class="blueprint">
-      <div style="display: flex; flex-wrap: wrap; border-bottom: 1px solid var(--color-divider); font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase">
-        <span style="flex: 1; min-width: 16ch; padding: 12px 22px">PUPS — plate system data</span>
-        <span style="padding: 12px 22px; border-left: 1px solid var(--color-divider); color: color-mix(in srgb, var(--color-text) 70%, transparent)">Rev A</span>
-        <span style="padding: 12px 22px; border-left: 1px solid var(--color-divider); color: color-mix(in srgb, var(--color-text) 70%, transparent)">Anchorage, AK</span>
-      </div>
-      <table class="table" style="width: 100%">
-        <tbody>
-          <sc-for list="{{ specs }}" as="row" hint-placeholder-count="6">
-            <tr>
-              <td style="width: 8ch; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--color-accent-700); padding-left: 22px">{{ row.n }}</td>
-              <td style="width: 30%; font-size: 15px">{{ row.prop }}</td>
-              <td style="font-family: var(--font-heading); font-size: 21px; letter-spacing: 0.02em; white-space: nowrap">{{ row.val }}</td>
-              <td style="font-size: 15px; color: color-mix(in srgb, var(--color-text) 78%, transparent); padding-right: 22px">{{ row.note }}</td>
-            </tr>
+    <div style="display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(28px, 4vw, 64px); align-items: center">
+      <div>
+        <h2 style="margin: 0; font-size: clamp(28px, 3vw, 40px); text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.06">Any binding<br>you already own</h2>
+        <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 80%, transparent); max-width: 50ch">Top plates arrive pre-drilled for the most common alpine, touring and telemark patterns. You bolt your binding to its top plate once — that pairing never comes apart again — and from then on the binding travels between skis instead of being installed into them.</p>
+        <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 80%, transparent); max-width: 50ch">Buy one base plate set per ski, one top plate set per binding. The combinations multiply from there.</p>
+        <div style="display: grid; gap: 1px; margin-top: 28px; background: var(--color-divider)">
+          <sc-for list="{{ patterns }}" as="p" hint-placeholder-count="3">
+            <div style="background: var(--color-bg); display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; padding: 14px 0">
+              <span style="font-family: var(--font-heading); font-size: 20px; text-transform: uppercase; letter-spacing: 0.02em; min-width: 11ch">{{ p.kind }}</span>
+              <span style="font-size: 14px; line-height: 1.45; color: color-mix(in srgb, var(--color-text) 76%, transparent)">{{ p.note }}</span>
+            </div>
           </sc-for>
-        </tbody>
-      </table>
-      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        </div>
+      </div>
+      <figure class="blueprint" style="margin: 0">
+        <img src="../assets/hero-two-bindings.png" alt="Two different bindings on one ski" style="display: block; width: 100%; aspect-ratio: 16 / 11; object-fit: cover">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      </figure>
+    </div>
+  </section>
+
+  <section id="stance" data-screen-label="Dynamic mount point" style="max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 100px) clamp(20px, 5vw, 72px) 0">
+    <span style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">04 · Dynamic mount point</span>
+    <div style="height: 1px; background: var(--color-divider); margin: 12px 0 40px"></div>
+    <div style="display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(28px, 4vw, 64px); align-items: center">
+      <figure class="blueprint" style="margin: 0">
+        <img src="../assets/baseplate-profile.jpg" alt="Base plate profile showing mount range" style="display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      </figure>
+      <div>
+        <h2 style="margin: 0; font-size: clamp(28px, 3vw, 40px); text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.06">Move your<br>stance, not<br>your skis</h2>
+        <p style="margin: 18px 0 24px; font-size: 16px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 80%, transparent); max-width: 50ch">The base plate accepts the top plate at any position up to ±2 cm* from the factory-recommended line. One ski, several personalities — and the change takes minutes on a tailgate, not an afternoon in a shop.</p>
+        <div class="seg" style="display: flex; width: 100%">
+          <sc-for list="{{ offsets }}" as="o" hint-placeholder-count="5">
+            <label class="seg-opt" style="flex: 1; justify-content: center; background: {{ o.bg }}; color: {{ o.fg }}">
+              <input type="radio" name="stance" checked="{{ o.checked }}" onChange="{{ o.select }}">
+              {{ o.label }}
+            </label>
+          </sc-for>
+        </div>
+        <div style="margin-top: 16px; font-family: var(--font-heading); font-size: 20px; text-transform: uppercase; letter-spacing: 0.02em">{{ offsetTitle }}</div>
+        <div style="margin-top: 8px; font-size: 15px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 78%, transparent); max-width: 46ch">{{ offsetNote }}</div>
+        <div style="margin-top: 14px; font-size: 12px; letter-spacing: 0.04em; color: color-mix(in srgb, var(--color-text) 70%, transparent)">* Binding brand dependent</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stack" data-screen-label="Stack and leverage" style="max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 100px) clamp(20px, 5vw, 72px) 0">
+    <span style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">05 · Stack and leverage</span>
+    <div style="height: 1px; background: var(--color-divider); margin: 12px 0 40px"></div>
+    <div style="display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(28px, 4vw, 64px); align-items: center">
+      <div>
+        <h2 style="margin: 0; font-size: clamp(28px, 3vw, 40px); text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.06">Eight millimetres,<br>wider footprint</h2>
+        <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 80%, transparent); max-width: 50ch">At a stack height of eight millimetres — thinner than a phone — PUPS gives skiers a wider footprint than a standard binding's, spreading forces further across the ski, transferring more of your input directly to the edge.</p>
+        <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 80%, transparent); max-width: 50ch">The base plate is POM-H: flexible enough to move with the ski's camber, tough enough to hold whatever you can throw at it. The top plate is 7075 aluminium for hard charging at the resort or Carbon Fiber to shave weight in the backcountry.</p>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin-top: 28px; background: var(--color-divider)">
+          <div style="background: var(--color-bg); padding: 18px 16px">
+            <span style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">Aluminum</span>
+            
+            <span style="display: block; font-family: var(--font-heading); font-size: 38px; letter-spacing: 0.02em; line-height: 1.05; margin-top: 8px">485 g</span><span style="display: block; font-size: 14px; line-height: 1.45; margin-top: 6px; color: color-mix(in srgb, var(--color-text) 76%, transparent)">Per ski - robust, for hard charging inbound lines</span>
+          </div>
+          <div style="background: var(--color-bg); padding: 18px 16px">
+            <span style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">Carbon fiber</span>
+            <span style="display: block; font-family: var(--font-heading); font-size: 38px; letter-spacing: 0.02em; line-height: 1.05; margin-top: 8px">287 g</span>
+            <span style="display: block; font-size: 14px; line-height: 1.45; margin-top: 6px; color: color-mix(in srgb, var(--color-text) 76%, transparent)">Per ski — for when you want to earn your turns</span>
+          </div>
+        </div>
+      </div>
+      <div class="blueprint" style="padding: 0">
+        <div style="display: flex; flex-wrap: wrap; border-bottom: 1px solid var(--color-divider); font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase">
+          <span style="flex: 1; min-width: 16ch; padding: 12px 22px">Materials and dimensions</span>
+          <span style="padding: 12px 22px; border-left: 1px solid var(--color-divider); color: color-mix(in srgb, var(--color-text) 70%, transparent)">Rev A</span>
+        </div>
+        <table class="table" style="width: 100%">
+          <tbody>
+            <sc-for list="{{ specs }}" as="row" hint-placeholder-count="8">
+              <tr>
+                <td style="width: 8ch; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--color-accent-700); padding-left: 22px">{{ row.n }}</td>
+                <td style="width: 34%; font-size: 15px">{{ row.prop }}</td>
+                <td style="font-family: var(--font-heading); font-size: 21px; letter-spacing: 0.02em; white-space: nowrap; padding-right: 22px">{{ row.val }}</td>
+              </tr>
+            </sc-for>
+          </tbody>
+        </table>
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      </div>
     </div>
   </section>
 
@@ -235,14 +224,14 @@
     <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 64px); align-items: center">
       <div>
         <h2 style="margin: 0; font-size: clamp(30px, 3.6vw, 48px); line-height: 1.04; text-transform: uppercase; letter-spacing: 0.01em">Find your pack</h2>
-        <p style="margin: 18px 0 28px; font-size: 16px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 78%, transparent); max-width: 46ch">Built in a garage in Anchorage by two skiers who were tired of choosing between skis instead of riding them all.</p>
+        <p style="margin: 18px 0 28px; font-size: 16px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 78%, transparent); max-width: 46ch">Built in a garage in Anchorage by two skiers who were tired of choosing between skis instead of riding them.</p>
         <div style="display: flex; gap: 12px; flex-wrap: wrap">
-          <a class="btn btn-primary" href="buy/" style="text-decoration: none; min-height: 42px; padding-inline: 22px">Shop plate sets</a>
+          <a class="btn btn-primary" href="../buy/" style="text-decoration: none; min-height: 42px; padding-inline: 22px">Shop plate sets</a>
           <a class="btn" href="mailto:Info@PackAnimalsSkiCo.com" style="text-decoration: none; min-height: 42px; padding-inline: 22px">Talk to us</a>
         </div>
       </div>
       <figure class="blueprint" style="margin: 0">
-        <img src="assets/baseplate-mounted.jpg" alt="Base plate mounted to a ski" style="display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover">
+        <img src="../assets/baseplate-mounted.jpg" alt="Base plate mounted to a ski" style="display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover">
         <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
       </figure>
     </div>
@@ -258,15 +247,15 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#5980a6&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#5980a6&quot;,&quot;#416180&quot;,&quot;#1d2d3d&quot;],&quot;section&quot;:&quot;Theme&quot;}}">
 class Component extends DCLogic {
-  state = { step: 0, skis: 5, bindings: 3, offset: 0 };
+  state = { step: 0, offset: 0 };
 
   renderVals() {
     const accent = this.props.accent ?? '#5980a6';
     const steps = [
-      { n: '01', title: 'Mount the base plate', body: 'Screwed to the factory line at your boot sole length, like any binding. POM-H, flexible and durable.', video: 'assets/step-1-base-plate.mp4' },
-      { n: '02', title: 'Binding install', body: 'Alpine, touring or telemark — bolted once to the top plate, then it travels with you.', video: 'assets/step-4-binding.mp4' },
-      { n: '03', title: 'Top plate install', body: 'Rotated into the base plate until the triaxial interface engages. Smooth, intuitive, locked.', video: 'assets/step-4-top-plate-install.mp4' },
-      { n: '04', title: 'Pin install', body: 'Locking pins drop in and the two plates become one piece. No tools on the hill.', video: 'assets/step-3-pin.mp4' }
+      { n: '01', title: 'Mount the base plate', body: 'Screwed to the factory line at your boot sole length, like any binding. POM-H, flexible and durable.', video: '../assets/step-1-base-plate.mp4' },
+      { n: '02', title: 'Binding install', body: 'Alpine, touring or telemark — bolted once to the top plate, then it travels with you.', video: '../assets/step-4-binding.mp4' },
+      { n: '03', title: 'Top plate install', body: 'Rotated into the base plate until the triaxial interface engages. Smooth, intuitive, locked.', video: '../assets/step-4-top-plate-install.mp4' },
+      { n: '04', title: 'Pin install', body: 'Locking pins drop in and the two plates become one piece. No tools on the hill.', video: '../assets/step-3-pin.mp4' }
     ];
     const i = this.state.step;
     const offsets = [-2, -1, 0, 1, 2].map((v) => ({
@@ -277,31 +266,40 @@ class Component extends DCLogic {
       select: () => this.setState({ offset: v })
     }));
     const notes = {
-      '-2': 'Set back 2 cm — longer effective edge, more float in soft snow.',
-      '-1': 'Set back 1 cm — a touch more tip for variable conditions.',
-      '0': '',
-      '1': 'Forward 1 cm — quicker, more centered on hard snow.',
-      '2': 'Forward 2 cm — a true freestyle stance for park laps.'
+      '-2': ['Deep set back', 'Two centimetres behind the line — the longest effective edge and the most float. A powder ski, all day.'],
+      '-1': ['Set back', 'A centimetre behind. More tip in front of you for variable snow and long, drawn-out turns.'],
+      '0': ['Factory line', 'Where the manufacturer intended. Balanced, predictable, the right place to start.'],
+      '1': ['Forward', 'A centimetre ahead. Quicker to engage, more centred on hard snow and tighter turns.'],
+      '2': ['Freestyle', 'Two centimetres ahead — a true park stance, switch landings and spins on the same ski you toured.']
     };
+    const note = notes[String(this.state.offset)];
     return {
       steps: steps.map((s, k) => ({ ...s, bar: k === i ? accent : 'var(--color-divider)', select: () => this.setState({ step: k }) })),
       activeVideo: steps[i].video,
       activeCaption: steps[i].title,
       activeIndexLabel: 'Step ' + steps[i].n + ' / 04',
-      skis: this.state.skis,
-      bindings: this.state.bindings,
-      combos: this.state.skis * this.state.bindings,
-      setSkis: (e) => this.setState({ skis: Number(e.target.value) }),
-      setBindings: (e) => this.setState({ bindings: Number(e.target.value) }),
       offsets,
-      offsetNote: notes[String(this.state.offset)],
+      offsetTitle: note[0],
+      offsetNote: note[1],
+      axes: [
+        { axis: 'Vertical', note: 'Lift and heel load carried by the engaged geometry.' },
+        { axis: 'Horizontal', note: 'Fore and aft drive with no shift under braking.' },
+        { axis: 'Lateral', note: 'Edge-to-edge input arrives without twist or lag.' }
+      ],
+      patterns: [
+        { kind: 'Alpine', note: 'Standard resort patterns, pre-drilled.' },
+        { kind: 'Touring', note: 'Pin and frame bindings, uphill to down.' },
+        { kind: 'Telemark', note: 'Free-heel patterns on the same base plate.' }
+      ],
       specs: [
-        { n: '01', prop: 'Stack height', val: '8 mm', note: 'Thinner than a smartphone' },
-        { n: '02', prop: 'Top plate', val: '7075 AL', note: 'Aircraft-grade, pre-drilled per binding pattern' },
-        { n: '03', prop: 'Base plate', val: 'POM-H', note: 'Mounted with standard wood screws' },
-        { n: '04', prop: 'Mount range', val: '± 2 cm', note: 'From the factory-recommended line. Brand-dependent.' },
-        { n: '05', prop: 'Engagement', val: '3 axes', note: 'Vertical, horizontal and lateral' },
-        { n: '06', prop: 'Binding types', val: '3', note: 'Alpine, touring, telemark' }
+        { n: '01', prop: 'Stack height', val: '8 mm' },
+        { n: '02', prop: 'Top plate material', val: '7075 AL' },
+        { n: '03', prop: 'Base plate material', val: 'POM-H' },
+        { n: '04', prop: 'Weight, aluminum', val: '485 g, per ski' },
+        { n: '05', prop: 'Weight, carbon', val: '287 g, per ski' },
+        { n: '06', prop: 'Mount range', val: '± 2 cm' },
+        { n: '07', prop: 'Engagement axes', val: '3' },
+        { n: '08', prop: 'Binding types', val: '3' }
       ]
     };
   }
