@@ -405,9 +405,10 @@ class Component extends DCLogic {
       kicker: 'Top plate ' + (i + 1),
       title: nameOf(p.material),
       priceLabel: this.money(priceOf(p.material)),
+      weightLabel: (p.material === 'CF' ? '287 g' : '485 g') + ' / ski',
       materialNote: p.material === 'CF'
-        ? 'Carbon fiber — the lightest set, for touring setups where every gram is counted.'
-        : '7075 aluminium — the same alloy as your binding, and the value pick for resort use.',
+        ? 'Carbon fiber — 287 g per ski with the base plate. The lightest set, for touring where every gram is counted.'
+        : '7075 aluminium — 485 g per ski with the base plate. The same alloy as your binding, and the value pick for resort use.',
       materials: [
         { label: 'Aluminum', group: 'mat' + i, checked: p.material === 'AL', ...seg(p.material === 'AL'), select: () => this.setPlate(i, { material: 'AL' }) },
         { label: 'Carbon fiber', group: 'mat' + i, checked: p.material === 'CF', ...seg(p.material === 'CF'), select: () => this.setPlate(i, { material: 'CF' }) }
@@ -481,7 +482,7 @@ class Component extends DCLogic {
       baseOptions,
       topOptions,
       plates,
-      basePriceNote: 'Sold as a set per ski — ' + this.money(basePrice) + ' per set.',
+      basePriceNote: 'Sold as a set per ski — ' + this.money(basePrice) + ' covers one ski, both feet.',
       lines,
       discounts: discounts.map((d) => ({ label: d.label, note: d.note, amount: '−' + this.money(d.value) })),
       nextDiscountHint: hint,
@@ -489,7 +490,7 @@ class Component extends DCLogic {
       extraBase: stepper('extraBase', xBase),
       extraTop: stepper('extraTop', xTop),
       extraBasePriceLabel: this.money(basePrice) + ' each',
-      extraTopPriceLabel: this.money(priceOf(xTopMat)) + ' each',
+      extraTopPriceLabel: this.money(priceOf(xTopMat)) + ' each — ' + (xTopMat === 'CF' ? '287 g' : '485 g') + ' per ski',
       extraTopBrand: this.state.extraTopBrand,
       extraTopModel: this.state.extraTopModel,
       extraTopModels: BINDINGS[this.state.extraTopBrand],
