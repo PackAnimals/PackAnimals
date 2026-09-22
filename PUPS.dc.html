@@ -34,7 +34,7 @@
     .seg-opt { min-width: 44%; }
   }
 </style>
-<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#5980a6"/><text x="50" y="60" font-family="Barlow Condensed, sans-serif" font-size="30" font-weight="700" fill="#f2f2f3" text-anchor="middle">PUPS</text></svg></template>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#5980a6"></rect><text x="50" y="60" font-family="Barlow Condensed, sans-serif" font-size="30" font-weight="700" fill="#f2f2f3" text-anchor="middle">PUPS</text></svg></template>
 </helmet>
 
 <div style="background: transparent">
@@ -82,10 +82,18 @@
       </figure>
     </div>
     <div style="border-top: 1px solid rgba(242,242,243,0.22)">
-      <div style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px); display: grid; grid-template-columns: repeat(4, 1fr)">
+      <div style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px); display: grid; grid-template-columns: repeat(6, 1fr)">
         <div style="padding: 20px 20px 20px 0; border-right: 1px solid rgba(242,242,243,0.22)">
           <div style="font-family: var(--font-heading); font-size: 30px; letter-spacing: 0.02em">8 MM</div>
           <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-300); margin-top: 4px">Stack height</div>
+        </div>
+        <div style="padding: 20px; border-right: 1px solid rgba(242,242,243,0.22)">
+          <div style="font-family: var(--font-heading); font-size: 30px; letter-spacing: 0.02em">287 G</div>
+          <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-300); margin-top: 4px">Per ski, carbon</div>
+        </div>
+        <div style="padding: 20px; border-right: 1px solid rgba(242,242,243,0.22)">
+          <div style="font-family: var(--font-heading); font-size: 30px; letter-spacing: 0.02em">485 G</div>
+          <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-300); margin-top: 4px">Per ski, aluminum</div>
         </div>
         <div style="padding: 20px; border-right: 1px solid rgba(242,242,243,0.22)">
           <div style="font-family: var(--font-heading); font-size: 30px; letter-spacing: 0.02em">7075</div>
@@ -107,7 +115,7 @@
     <span style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">01 · The install, filmed</span>
     <div style="height: 1px; background: var(--color-divider); margin: 12px 0 40px"></div>
     <div style="display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(20px, 4vw, 56px); align-items: end; margin-bottom: 32px">
-      <h2 style="margin: 0; font-size: clamp(30px, 3.6vw, 48px); line-height: 1.04; text-transform: uppercase; letter-spacing: 0.01em">Four moves,<br>then you ski</h2>
+      <h2 style="margin: 0; font-size: clamp(30px, 3.6vw, 48px); line-height: 1.04; text-transform: uppercase; letter-spacing: 0.01em">Choose your Setup,<br>Install in minutes.&nbsp;</h2>
       <p style="margin: 0; font-size: 16px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 78%, transparent); max-width: 56ch">Step through the sequence below — installation is simple, and operation is smooth and seamless.</p>
     </div>
     <div>
@@ -121,9 +129,9 @@
       </figure>
       <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 28px; border-top: 1px solid var(--color-divider)">
         <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
-          <button type="button" onClick="{{ s.select }}" style="display: block; text-align: left; background: transparent; border: 0; border-top: 3px solid {{ s.bar }}; padding: 18px 20px 20px 0; margin-top: -1px; cursor: pointer; font-family: var(--font-body); color: var(--color-text)" style-hover="background: color-mix(in srgb, var(--color-text) 5%, transparent)">
+          <button type="button" onClick="{{ s.select }}" style="display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; text-align: left; background: transparent; border: 0; border-top: 3px solid {{ s.bar }}; padding: 18px 20px 20px 0; margin-top: -1px; cursor: pointer; font-family: var(--font-body); color: var(--color-text)" style-hover="background: color-mix(in srgb, var(--color-text) 5%, transparent)">
             <span style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; color: var(--color-accent-700)">{{ s.n }}</span>
-            <span style="display: block; font-family: var(--font-heading); font-size: 21px; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.15; margin-top: 8px">{{ s.title }}</span>
+            <span style="display: block; font-family: var(--font-heading); font-size: 21px; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.15; margin-top: 8px; min-height: 2.3em">{{ s.title }}</span>
             <span style="display: block; font-size: 14px; line-height: 1.5; margin-top: 8px; color: color-mix(in srgb, var(--color-text) 74%, transparent)">{{ s.body }}</span>
           </button>
         </sc-for>
@@ -139,9 +147,9 @@
         <h2 style="margin: 0 0 8px; font-size: clamp(26px, 2.6vw, 34px); text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.1">Count your setups</h2>
         <p style="margin: 0 0 32px; font-size: 15px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 76%, transparent)">Set your quiver. The number opposite is how many ski-and-binding combinations you can actually ride.</p>
         <label style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">Skis — {{ skis }}</label>
-        <input type="range" min="1" max="8" step="1" value="{{ skis }}" onChange="{{ setSkis }}" style="width: 100%; margin: 12px 0 28px">
+        <input type="range" min="1" max="8" step="1" value="{{ skis }}" onInput="{{ setSkis }}" onChange="{{ setSkis }}" style="width: 100%; margin: 12px 0 28px">
         <label style="display: block; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700)">Bindings — {{ bindings }}</label>
-        <input type="range" min="1" max="5" step="1" value="{{ bindings }}" onChange="{{ setBindings }}" style="width: 100%; margin: 12px 0 0">
+        <input type="range" min="1" max="5" step="1" value="{{ bindings }}" onInput="{{ setBindings }}" onChange="{{ setBindings }}" style="width: 100%; margin: 12px 0 0">
       </div>
       <div style="padding: clamp(24px, 3vw, 40px); display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
         <div style="display: flex; align-items: baseline; gap: 14px">
@@ -171,7 +179,7 @@
       </figure>
       <div>
         <h3 style="margin: 0; font-size: clamp(26px, 2.6vw, 34px); text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.1">Triaxial engagement</h3>
-        <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 78%, transparent); max-width: 48ch">Rotate the top plate into place and it locks against vertical, horizontal and lateral load at once — a mechanically engaged connection, then the pins go in. No slop, no creep, nothing to feel but the snow.</p>
+        <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 78%, transparent); max-width: 48ch">Rotate the top plate into place and it locks against vertical, horizontal and lateral load at once — a mechanically engaged connection held with a stainless steel locking pin. No slop, no creep, nothing to feel but the snow.</p>
       </div>
     </div>
 
@@ -217,7 +225,7 @@
       </div>
       <table class="table" style="width: 100%">
         <tbody>
-          <sc-for list="{{ specs }}" as="row" hint-placeholder-count="6">
+          <sc-for list="{{ specs }}" as="row" hint-placeholder-count="8">
             <tr>
               <td style="width: 8ch; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--color-accent-700); padding-left: 22px">{{ row.n }}</td>
               <td style="width: 30%; font-size: 15px">{{ row.prop }}</td>
@@ -258,7 +266,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#5980a6&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#5980a6&quot;,&quot;#416180&quot;,&quot;#1d2d3d&quot;],&quot;section&quot;:&quot;Theme&quot;}}">
 class Component extends DCLogic {
-  state = { step: 0, skis: 5, bindings: 3, offset: 0 };
+  state = { step: 0, skis: 3, bindings: 2, offset: 0 };
 
   renderVals() {
     const accent = this.props.accent ?? '#5980a6';
@@ -279,7 +287,7 @@ class Component extends DCLogic {
     const notes = {
       '-2': 'Set back 2 cm — longer effective edge, more float in soft snow.',
       '-1': 'Set back 1 cm — a touch more tip for variable conditions.',
-      '0': '',
+      '0': 'Factory line — where the manufacturer intended. Balanced and predictable.',
       '1': 'Forward 1 cm — quicker, more centered on hard snow.',
       '2': 'Forward 2 cm — a true freestyle stance for park laps.'
     };
@@ -297,11 +305,13 @@ class Component extends DCLogic {
       offsetNote: notes[String(this.state.offset)],
       specs: [
         { n: '01', prop: 'Stack height', val: '8 mm', note: 'Thinner than a smartphone' },
-        { n: '02', prop: 'Top plate', val: '7075 AL', note: 'Aircraft-grade, pre-drilled per binding pattern' },
+        { n: '02', prop: 'Top plate', val: '7075 AL or Carbon Fiber', note: 'Aircraft-grade, pre-drilled per binding pattern' },
         { n: '03', prop: 'Base plate', val: 'POM-H', note: 'Mounted with standard wood screws' },
-        { n: '04', prop: 'Mount range', val: '± 2 cm', note: 'From the factory-recommended line. Brand-dependent.' },
-        { n: '05', prop: 'Engagement', val: '3 axes', note: 'Vertical, horizontal and lateral' },
-        { n: '06', prop: 'Binding types', val: '3', note: 'Alpine, touring, telemark' }
+        { n: '04', prop: 'System weight', val: '485 g', note: 'Aluminum top plate with base plate, per ski' },
+        { n: '05', prop: 'Carbon weight', val: '287 g', note: 'Carbon fiber top plate with base plate, per ski' },
+        { n: '06', prop: 'Mount range', val: '± 2 cm', note: 'From the factory-recommended line. Brand-dependent.' },
+        { n: '07', prop: 'Engagement', val: '3 axes', note: 'Vertical, horizontal and lateral' },
+        { n: '08', prop: 'Binding types', val: '3', note: 'Alpine, touring, telemark' }
       ]
     };
   }
